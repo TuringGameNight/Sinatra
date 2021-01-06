@@ -9,6 +9,7 @@ gem 'tux'
 gem 'faraday'
 gem 'figaro'
 gem 'rake'
+gem 'activerecord'
 
 group :test do
   gem 'rspec'
