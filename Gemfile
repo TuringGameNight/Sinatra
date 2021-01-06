@@ -8,6 +8,7 @@ gem 'pry'
 gem 'tux'
 gem 'faraday'
 gem 'figaro'
+gem 'rake'
 
 group :test do
   gem 'rspec'
