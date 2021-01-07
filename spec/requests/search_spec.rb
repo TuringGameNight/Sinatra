@@ -7,7 +7,7 @@ end
 RSpec.describe 'SearchController' do
   describe 'GET /api/v1/search' do
     it 'returns json data' do
-      response = get '/api/v1/search/catan'
+      response = get '/api/v1/search?name=catan'
       games = JSON.parse(response.body, symbolize_names: true)
 
       expect(games).to be_a(Hash)
