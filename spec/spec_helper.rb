@@ -5,12 +5,6 @@ require 'rack/test'
 require 'capybara/rspec'
 require 'capybara/dsl'
 
-if ActiveRecord::Base.connection.migration_context.needs_migration?
-  raise 'Migrations are pending. Run `rake db:migrate SINATRA_ENV=test` to resolve the issue.'
-end
-
-ActiveRecord::Base.logger = nil
-
 RSpec.configure do |config|
   config.run_all_when_everything_filtered = true
   config.filter_run :focus
@@ -20,8 +14,8 @@ RSpec.configure do |config|
   config.order = 'default'
 end
 
-def app
-  Rack::Builder.parse_file('config.ru').first
-end
+# def app
+  # Rack::Builder.parse_file('config.ru').first
+# end
 
-Capybara.app = app
+# Capybara.app = app
