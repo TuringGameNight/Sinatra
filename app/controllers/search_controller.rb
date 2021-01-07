@@ -2,16 +2,14 @@ require './config/environment'
 
 class SearchController < ApplicationController
 
-  get '/api/v1/search' do
+  get '/api/v1/search/:name' do
     conn = Faraday.new(
       url: 'https://api.boardgameatlas.com/api/',
-      # client_id will go in a ENV variable
       params: { client_id: ENV['CLIENT_ID'] }
     )
 
     response = conn.get('search') do |req|
-      # this param will need to come from the search GET request
-      req.params['name'] = 'monopoly'
+      req.params['name'] = params['name']
     end
 
     response.body
