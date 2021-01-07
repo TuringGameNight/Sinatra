@@ -6,8 +6,8 @@ class SearchController < ApplicationController
     conn = Faraday.new(
       url: 'https://api.boardgameatlas.com/api/',
       # client_id will go in a ENV variable
-      params: { client_id: 'zPLv9mln8q' }
-    ) 
+      params: { client_id: ENV['CLIENT_ID'] }
+    )
 
     response = conn.get('search') do |req|
       # this param will need to come from the search GET request
