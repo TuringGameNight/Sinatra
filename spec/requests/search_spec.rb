@@ -5,9 +5,9 @@ def app
 end
 
 RSpec.describe 'SearchController' do
-  context 'when a search request is recieved' do
+  describe 'GET /api/v1/search' do
     it 'returns json data' do
-      get '/api/v1/search'
+      response = get '/api/v1/search'
     end
   end
 end
