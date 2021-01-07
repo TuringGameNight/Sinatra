@@ -9,6 +9,7 @@ gem 'tux'
 gem 'faraday'
 gem 'figaro'
 gem 'rake'
+gem 'jsonapi-serializer'
 
 group :test do
   gem 'rspec'
