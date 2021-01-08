@@ -6,36 +6,39 @@ end
 
 RSpec.describe 'SearchController' do
   describe 'GET /api/v1/search' do
-    xit 'returns json data' do
+    it 'returns json data' do
       response = get '/api/v1/search?name=catan'
-      games = JSON.parse(response.body, symbolize_names: true)
 
-      expect(games).to be_a(Hash)
-      expect(games).to have_key(:games)
+      games = JSON.parse(response.body, symbolize_names: true)[:data]
 
-      expect(games[:games]).to be_an(Array)
-      expect(games[:games].count).to eq(100)
+      expect(games).to be_a(Array)
 
-      expect(games[:games].first).to be_a(Hash)
+      expect(games).to be_an(Array)
+      expect(games.count).to eq(100)
 
-      expect(games[:games].first).to have_key(:name)
-      expect(games[:games].first[:name]).to be_a(String)
+      expect(games.first).to be_a(Hash)
 
-      expect(games[:games].first).to have_key(:description)
-      expect(games[:games].first[:description]).to be_a(String)
+      expect(games.first).to have_key(:attributes)
+      expect(games.first[:attributes]).to be_a(Hash)
 
-      expect(games[:games].first).to have_key(:min_age)
-      expect(games[:games].first[:min_age]).to be_an(Integer)
+      expect(games.first[:attributes]).to have_key(:name)
+      expect(games.first[:attributes][:name]).to be_a(String)
 
-      expect(games[:games].first).to have_key(:min_playtime)
-      expect(games[:games].first[:min_playtime]).to be_an(Integer)
+      expect(games.first[:attributes]).to have_key(:description)
+      expect(games.first[:attributes][:description]).to be_a(String)
 
-      expect(games[:games].first).to have_key(:max_playtime)
-      expect(games[:games].first[:max_playtime]).to be_an(Integer)
+      expect(games.first[:attributes]).to have_key(:age_range)
+      expect(games.first[:attributes][:age_range]).to be_an(String)
 
-      expect(games[:games].first).to have_key(:image_url)
-      expect(games[:games].first[:image_url]).to be_a(String)
+      expect(games.first[:attributes]).to have_key(:duration)
+      expect(games.first[:attributes][:duration]).to be_an(Integer)
 
+      expect(games.first[:attributes]).to have_key(:image)
+      expect(games.first[:attributes][:image]).to be_a(String)
+
+      expect(games.first[:attributes]).to have_key(:type)
+
+      expect(games.first[:attributes][:type]).to be_nil
       # TODO: Need to find type/category/mechanics of game
     end
   end
