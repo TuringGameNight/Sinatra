@@ -1,11 +1,11 @@
 require './spec/spec_helper'
 
-def app
-  SearchController
-end
-
 RSpec.describe 'SearchController' do
   describe 'GET /api/v1/search' do
+    def app
+      SearchController
+    end
+    
     it 'returns json data' do
       response = get '/api/v1/search?name=catan'
 
