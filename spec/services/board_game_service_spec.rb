@@ -1,11 +1,12 @@
-require './spec/spec_helper'
+# frozen_string_literal: true
 
+require './spec/spec_helper'
 
 RSpec.describe 'BoardGamesService' do
   def app
     BoardGamesService
   end
-  
+
   describe 'class methods' do
     describe '.find_board_games(name)' do
       it 'returns json data' do

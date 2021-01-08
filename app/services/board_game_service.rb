@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class BoardGamesService
   def self.conn
-    conn = Faraday.new(
+    Faraday.new(
       url: 'https://api.boardgameatlas.com/api/',
       params: { client_id: ENV['CLIENT_ID'] }
     )

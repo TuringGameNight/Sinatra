@@ -1,11 +1,12 @@
-require './spec/spec_helper'
+# frozen_string_literal: true
 
+require './spec/spec_helper'
 
 RSpec.describe 'BoardGame' do
   def app
     BoardGame
   end
-  
+
   it 'exists and has attributes' do
     board_games = BoardGamesService.find_board_games('catan')
     game = BoardGame.new(board_games.first)

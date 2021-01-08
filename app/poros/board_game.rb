@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BoardGame
   attr_reader :name, :description, :duration, :image, :game_type
 
@@ -12,6 +14,7 @@ class BoardGame
 
   def age_range
     return nil if @min_age.nil?
+
     "#{@min_age}+"
   end
 end

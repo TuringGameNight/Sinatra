@@ -1,11 +1,12 @@
-require './spec/spec_helper'
+# frozen_string_literal: true
 
+require './spec/spec_helper'
 
 RSpec.describe 'BoardGamesFacade' do
   def app
     BoardGamesFacade
   end
-  
+
   it 'returns board games' do
     board_games = BoardGamesFacade.search('catan')
 
