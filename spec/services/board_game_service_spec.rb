@@ -1,10 +1,11 @@
 require './spec/spec_helper'
 
-def app
-  BoardGamesService
-end
 
 RSpec.describe 'BoardGamesService' do
+  def app
+    BoardGamesService
+  end
+  
   describe 'class methods' do
     describe '.find_board_games(name)' do
       it 'returns json data' do

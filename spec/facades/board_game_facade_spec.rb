@@ -1,10 +1,11 @@
 require './spec/spec_helper'
 
-def app
-  BoardGamesFacade
-end
 
 RSpec.describe 'BoardGamesFacade' do
+  def app
+    BoardGamesFacade
+  end
+  
   it 'returns board games' do
     board_games = BoardGamesFacade.search('catan')
 
