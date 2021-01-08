@@ -3,5 +3,5 @@ class BoardGameSerializer
 
   set_id { nil }
 
-  attributes :name, :description, :age_range, :duration, :image, :type
+  attributes :name, :description, :age_range, :duration, :image, :game_type
 end

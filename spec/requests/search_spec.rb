@@ -5,7 +5,7 @@ RSpec.describe 'SearchController' do
     def app
       SearchController
     end
-    
+
     it 'returns json data' do
       response = get '/api/v1/search?name=catan'
 
@@ -36,9 +36,8 @@ RSpec.describe 'SearchController' do
       expect(games.first[:attributes]).to have_key(:image)
       expect(games.first[:attributes][:image]).to be_a(String)
 
-      expect(games.first[:attributes]).to have_key(:type)
-
-      expect(games.first[:attributes][:type]).to be_nil
+      expect(games.first[:attributes]).to have_key(:game_type)
+      expect(games.first[:attributes][:game_type]).to be_nil
       # TODO: Need to find type/category/mechanics of game
     end
   end

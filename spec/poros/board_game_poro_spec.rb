@@ -14,6 +14,6 @@ RSpec.describe 'BoardGame' do
     expect(game.age_range).to eq('10+')
     expect(game.duration).to eq(90)
     expect(game.image).to eq('https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258096678-51Eiofu9mqL.jpg')
-    expect(game.type).to eq(nil)
+    expect(game.game_type).to eq(nil)
   end
 end
