@@ -34,6 +34,7 @@ Querying the endpoint `GET /api/v1/search?name=clue` returns the following data:
                 "age_range": "8+",
                 "duration": 60,
                 "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559254847936-611WyTryCvL.jpg",
+                "num_players": "3-6",
                 "game_type": null
             }
         },
@@ -46,6 +47,7 @@ Querying the endpoint `GET /api/v1/search?name=clue` returns the following data:
                 "age_range": "14+",
                 "duration": 45,
                 "image": "https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1540939172028",
+                "num_players": "2-6",
                 "game_type": null
             }
         }
