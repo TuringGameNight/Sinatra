@@ -16,4 +16,10 @@ class BoardGamesService
     json = JSON.parse(response.body, symbolize_names: true)
     json[:games]
   end
+
+  def self.category
+    response = conn.get('game/categories')
+    json = JSON.parse(response.body, symbolize_names: true)
+    json[:categories]
+  end
 end

@@ -13,4 +13,11 @@ RSpec.describe 'BoardGamesFacade' do
     expect(board_games).to be_a(Array)
     expect(board_games.first).to be_an_instance_of(BoardGame)
   end
+
+  it 'returns category list' do
+    categories = BoardGamesFacade.category
+
+    expect(categories).to be_a(Array)
+    expect(categories.first).to be_an_instance_of(Category)
+  end
 end
