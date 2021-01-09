@@ -9,7 +9,7 @@ RSpec.describe 'BoardGamesService' do
 
   describe 'class methods' do
     describe '.find_board_games(name)' do
-      it 'returns json data' do
+      it 'returns json data', :vcr do
         games = BoardGamesService.find_board_games('catan')
 
         expect(games).to be_an(Array)
@@ -31,6 +31,12 @@ RSpec.describe 'BoardGamesService' do
 
         expect(games.first).to have_key(:max_playtime)
         expect(games.first[:max_playtime]).to be_an(Integer)
+
+        expect(games.first).to have_key(:min_players)
+        expect(games.first[:min_players]).to be_an(Integer)
+
+        expect(games.first).to have_key(:max_players)
+        expect(games.first[:max_players]).to be_an(Integer)
 
         expect(games.first).to have_key(:image_url)
         expect(games.first[:image_url]).to be_a(String)

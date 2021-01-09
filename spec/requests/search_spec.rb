@@ -8,7 +8,7 @@ RSpec.describe 'SearchController' do
       SearchController
     end
 
-    it 'returns json data' do
+    it 'returns json data', :vcr do
       response = get '/api/v1/search?name=catan'
 
       games = JSON.parse(response.body, symbolize_names: true)[:data]
@@ -37,6 +37,9 @@ RSpec.describe 'SearchController' do
 
       expect(games.first[:attributes]).to have_key(:image)
       expect(games.first[:attributes][:image]).to be_a(String)
+
+      expect(games.first[:attributes]).to have_key(:num_players)
+      expect(games.first[:attributes][:num_players]).to be_a(String)
 
       expect(games.first[:attributes]).to have_key(:game_type)
       expect(games.first[:attributes][:game_type]).to be_nil
