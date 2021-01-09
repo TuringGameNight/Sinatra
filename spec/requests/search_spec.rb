@@ -16,7 +16,7 @@ RSpec.describe 'SearchController' do
       expect(games).to be_a(Array)
 
       expect(games).to be_an(Array)
-      expect(games.count).to eq(100)
+      expect(games.count).to eq(20)
 
       expect(games.first).to be_a(Hash)
 
