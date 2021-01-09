@@ -9,6 +9,8 @@ Add the BoardGameAtlas `CLIENT_ID` to the `application.yml` file
 
 You may run `shotgun` to start a Sinatra server. You may test the API endpoints in Postman with `localhost:9393`
 
+You may also use the production server using the base url: `https://turinggamenightsinatra.herokuapp.com`
+
 ## Endpoints
 
 This Microservice has an endpoint to search for games
