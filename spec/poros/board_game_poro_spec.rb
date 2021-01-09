@@ -29,7 +29,7 @@ RSpec.describe 'BoardGame' do
     end
 
     it 'returns nil if either min or max players is nil', :vcr do
-      board_games = BoardGamesService.find_board_games('clue')
+      board_games = BoardGamesService.find_board_games('Candyland Willy Wonka And The Chocolate Factory')
       game = BoardGame.new(board_games.last)
 
       expect(game.num_players).to eq(nil)

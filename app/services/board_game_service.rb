@@ -11,6 +11,7 @@ class BoardGamesService
   def self.find_board_games(name)
     response = conn.get('search') do |req|
       req.params['name'] = name
+      req.params['limit'] = 20
     end
 
     json = JSON.parse(response.body, symbolize_names: true)

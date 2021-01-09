@@ -27,13 +27,13 @@ RSpec.describe 'BoardGamesService' do
         expect(categories.first[:url]).to be_a(String)
       end
     end
-    
+
     describe '.find_board_games(name)' do
       it 'returns json data', :vcr do
         games = BoardGamesService.find_board_games('catan')
 
         expect(games).to be_an(Array)
-        expect(games.count).to eq(100)
+        expect(games.count).to eq(20)
 
         expect(games.first).to be_a(Hash)
 

@@ -3,7 +3,10 @@
 ## Getting Started
 
 Run `bundle install`
+
 Run `figaro install`
+
+Run `gem install shotgun`
 
 Add the BoardGameAtlas `CLIENT_ID` to the `application.yml` file
 
@@ -18,7 +21,7 @@ This Microservice has an endpoint to search for games
 get '/api/v1/search'
 ```
 
-A query param for `name` can be passed to return all board games matching that name from the Board Game Atlas API
+A query param for `name` can be passed to return all board games matching that name from the Board Game Atlas API. Up to a maximum of 20 board games are returned.
 
 ### Sample Response
 
