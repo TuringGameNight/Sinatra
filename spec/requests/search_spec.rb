@@ -8,7 +8,7 @@ RSpec.describe 'SearchController' do
       SearchController
     end
 
-    it 'returns json data' do
+    it 'returns json data', :vcr do
       response = get '/api/v1/search?name=catan'
 
       games = JSON.parse(response.body, symbolize_names: true)[:data]

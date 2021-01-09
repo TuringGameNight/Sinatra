@@ -9,7 +9,7 @@ RSpec.describe 'BoardGamesService' do
 
   describe 'class methods' do
     describe '.find_board_games(name)' do
-      it 'returns json data' do
+      it 'returns json data', :vcr do
         games = BoardGamesService.find_board_games('catan')
 
         expect(games).to be_an(Array)

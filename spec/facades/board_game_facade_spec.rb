@@ -7,7 +7,7 @@ RSpec.describe 'BoardGamesFacade' do
     BoardGamesFacade
   end
 
-  it 'returns board games' do
+  it 'returns board games', :vcr do
     board_games = BoardGamesFacade.search('catan')
 
     expect(board_games).to be_a(Array)

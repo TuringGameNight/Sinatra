@@ -7,7 +7,7 @@ RSpec.describe 'BoardGame' do
     BoardGame
   end
 
-  it 'exists and has attributes' do
+  it 'exists and has attributes', :vcr do
     board_games = BoardGamesService.find_board_games('catan')
     game = BoardGame.new(board_games.first)
 
@@ -21,14 +21,14 @@ RSpec.describe 'BoardGame' do
   end
 
   describe '#num_players' do
-    it 'returns one number if min players equals max players' do
+    it 'returns one number if min players equals max players', :vcr do
       board_games = BoardGamesService.find_board_games('chess')
       game = BoardGame.new(board_games.first)
 
       expect(game.num_players).to eq("2")
     end
 
-    it 'returns nil if either min or max players is nil' do
+    it 'returns nil if either min or max players is nil', :vcr do
       board_games = BoardGamesService.find_board_games('clue')
       game = BoardGame.new(board_games.last)
 
