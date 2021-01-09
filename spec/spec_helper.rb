@@ -1,4 +1,6 @@
-ENV["SINATRA_ENV"] = "test"
+# frozen_string_literal: true
+
+ENV['SINATRA_ENV'] = 'test'
 
 require_relative '../config/environment'
 require 'rack/test'
@@ -15,7 +17,7 @@ RSpec.configure do |config|
 end
 
 # def app
-  # Rack::Builder.parse_file('config.ru').first
+# Rack::Builder.parse_file('config.ru').first
 # end
 
 # Capybara.app = app
