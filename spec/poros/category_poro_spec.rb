@@ -8,7 +8,7 @@ RSpec.describe 'Category' do
   end
 
   it 'exists and has attributes' do
-    categories = CategoryService.category
+    categories = BoardGamesService.category
     category = Category.new(categories.first)
 
     expect(category.name).to eq('18XX')
