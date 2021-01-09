@@ -19,4 +19,20 @@ RSpec.describe 'BoardGame' do
     expect(game.num_players).to eq("3-4")
     expect(game.game_type).to eq(nil)
   end
+
+  describe '#num_players' do
+    it 'returns one number if min players equals max players' do
+      board_games = BoardGamesService.find_board_games('chess')
+      game = BoardGame.new(board_games.first)
+
+      expect(game.num_players).to eq("2")
+    end
+
+    it 'returns nil if either min or max players is nil' do
+      board_games = BoardGamesService.find_board_games('clue')
+      game = BoardGame.new(board_games.last)
+
+      expect(game.num_players).to eq(nil)
+    end
+  end
 end
