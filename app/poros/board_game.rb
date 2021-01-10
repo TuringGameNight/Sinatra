@@ -3,7 +3,7 @@
 class BoardGame
   attr_reader :name, :description, :duration, :image, :game_type
 
-  def initialize(data)
+  def initialize(data, categories = nil)
     @name = data[:name]
     @description = data[:description]
     @min_age = data[:min_age]
@@ -11,7 +11,7 @@ class BoardGame
     @image = data[:image_url]
     @min_players = data[:min_players]
     @max_players = data[:max_players]
-    @game_type = nil
+    @game_type = categories
   end
 
   def age_range
