@@ -61,7 +61,8 @@ RSpec.describe 'BoardGamesService' do
         expect(games.first).to have_key(:image_url)
         expect(games.first[:image_url]).to be_a(String)
 
-        # TODO: Need to find type/category/mechanics of game
+        expect(games.first).to have_key(:categories)
+        expect(games.first[:categories]).to be_a(Array)
       end
     end
   end
