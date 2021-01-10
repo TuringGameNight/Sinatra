@@ -35,4 +35,12 @@ RSpec.describe 'BoardGame' do
       expect(game.num_players).to eq(nil)
     end
   end
+
+  it 'returns nil if a category cannot be found', :vcr do
+    board_games = BoardGamesService.find_board_games('clues')
+    game = BoardGame.new(board_games.first)
+
+    expect(game.name).to eq('13 Clues')
+    expect(game.game_type).to eq(nil)
+  end
 end
