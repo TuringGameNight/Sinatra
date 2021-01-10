@@ -27,11 +27,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '420'
       X-Ratelimit-Remaining:
-      - '415'
+      - '395'
       Date:
-      - Sat, 09 Jan 2021 23:52:04 GMT
+      - Sun, 10 Jan 2021 15:43:04 GMT
       X-Ratelimit-Reset:
-      - '1610236371'
+      - '1610293411'
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -94,5 +94,5 @@ http_interactions:
             }
           ]
         }
-  recorded_at: Sat, 09 Jan 2021 23:52:04 GMT
+  recorded_at: Sun, 10 Jan 2021 15:43:04 GMT
 recorded_with: VCR 6.0.0
