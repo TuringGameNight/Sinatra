@@ -5,7 +5,16 @@ class BoardGamesFacade
     data = BoardGamesService.find_board_games(name)
 
     data.map do |game|
-      BoardGame.new(game)
+      categories = []
+      available_categories = BoardGamesFacade.category
+      game[:categories].each do |game_category|
+        available_categories.each do |category|
+          if game_category[:id] == category.id
+            categories << category.name
+          end
+        end
+      end
+      BoardGame.new(game, categories.join(', '))
     end
   end
 

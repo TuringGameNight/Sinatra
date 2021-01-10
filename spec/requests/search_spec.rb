@@ -42,8 +42,7 @@ RSpec.describe 'SearchController' do
       expect(games.first[:attributes][:num_players]).to be_a(String)
 
       expect(games.first[:attributes]).to have_key(:game_type)
-      expect(games.first[:attributes][:game_type]).to be_nil
-      # TODO: Need to find type/category/mechanics of game
+      expect(games.first[:attributes][:game_type]).to be_a(String)
     end
   end
 end
