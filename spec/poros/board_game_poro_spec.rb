@@ -9,7 +9,7 @@ RSpec.describe 'BoardGame' do
 
   it 'exists and has attributes', :vcr do
     board_games = BoardGamesService.find_board_games('catan')
-    categories = BoardGamesFacade.category
+    categories = BoardGamesFacade.translate_ids(board_games.first)
     game = BoardGame.new(board_games.first, categories)
 
     expect(game.name).to eq('Catan')
@@ -24,7 +24,7 @@ RSpec.describe 'BoardGame' do
   describe '#num_players' do
     it 'returns one number if min players equals max players', :vcr do
       board_games = BoardGamesService.find_board_games('chess')
-      categories = BoardGamesFacade.category
+      categories = BoardGamesFacade.translate_ids(board_games.first)
       game = BoardGame.new(board_games.first, categories)
 
       expect(game.num_players).to eq("2")
@@ -32,7 +32,7 @@ RSpec.describe 'BoardGame' do
 
     it 'returns nil if either min or max players is nil', :vcr do
       board_games = BoardGamesService.find_board_games('Candyland Willy Wonka And The Chocolate Factory')
-      categories = BoardGamesFacade.category
+      categories = BoardGamesFacade.translate_ids(board_games.first)
       game = BoardGame.new(board_games.last, categories)
 
       expect(game.num_players).to eq(nil)
@@ -41,7 +41,7 @@ RSpec.describe 'BoardGame' do
 
   it 'returns nil if a category cannot be found', :vcr do
     board_games = BoardGamesService.find_board_games('clues')
-    categories = BoardGamesFacade.category
+    categories = BoardGamesFacade.translate_ids(board_games.first)
     game = BoardGame.new(board_games.first, categories)
 
     expect(game.name).to eq('13 Clues')
