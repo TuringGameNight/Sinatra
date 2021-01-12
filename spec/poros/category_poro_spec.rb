@@ -13,6 +13,5 @@ RSpec.describe 'Category' do
 
     expect(category.name).to eq('18XX')
     expect(category.id).to eq('2bdFPJUvFo')
-    expect(category.url).to eq('https://www.boardgameatlas.com/category/2bdFPJUvFo/18xx')
   end
 end
