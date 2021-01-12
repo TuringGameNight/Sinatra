@@ -9,8 +9,7 @@ RSpec.describe 'BoardGame' do
 
   it 'exists and has attributes', :vcr do
     board_games = BoardGamesService.find_board_games('catan')
-    categories = BoardGamesFacade.translate_ids(board_games.first)
-    game = BoardGame.new(board_games.first, categories)
+    game = BoardGame.new(board_games.first)
 
     expect(game.name).to eq('Catan')
     expect(game.description).to eq(board_games.first[:description])
@@ -18,22 +17,20 @@ RSpec.describe 'BoardGame' do
     expect(game.duration).to eq(90)
     expect(game.image).to eq('https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1559258096678-51Eiofu9mqL.jpg')
     expect(game.num_players).to eq("3-4")
-    expect(game.game_type).to eq("Dice, Economic, Family Game, Negotiation")
+    expect(game.game_type).to eq([{:id=>"mavSOM8vjH"},{:id=>"N0TkEGfEsF"},{:id=>"7rV11PKqME"},{:id=>"jZEDOpx07e"}])
   end
 
   describe '#num_players' do
     it 'returns one number if min players equals max players', :vcr do
       board_games = BoardGamesService.find_board_games('chess')
-      categories = BoardGamesFacade.translate_ids(board_games.first)
-      game = BoardGame.new(board_games.first, categories)
+      game = BoardGame.new(board_games.first)
 
       expect(game.num_players).to eq("2")
     end
 
     it 'returns nil if either min or max players is nil', :vcr do
       board_games = BoardGamesService.find_board_games('Candyland Willy Wonka And The Chocolate Factory')
-      categories = BoardGamesFacade.translate_ids(board_games.first)
-      game = BoardGame.new(board_games.last, categories)
+      game = BoardGame.new(board_games.last)
 
       expect(game.num_players).to eq(nil)
     end
@@ -41,10 +38,9 @@ RSpec.describe 'BoardGame' do
 
   it 'returns nil if a category cannot be found', :vcr do
     board_games = BoardGamesService.find_board_games('clues')
-    categories = BoardGamesFacade.translate_ids(board_games.first)
-    game = BoardGame.new(board_games.first, categories)
+    game = BoardGame.new(board_games.first)
 
     expect(game.name).to eq('13 Clues')
-    expect(game.game_type).to eq(nil)
+    expect(game.game_type).to eq([])
   end
 end
