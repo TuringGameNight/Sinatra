@@ -21,6 +21,10 @@ class BoardGamesService
   def self.category
     response = conn.get('game/categories')
     json = JSON.parse(response.body, symbolize_names: true)
+#catch error and pass to FE
+    unless json.key? :categories
+      puts json 
+    end
     json[:categories]
   end
 end
