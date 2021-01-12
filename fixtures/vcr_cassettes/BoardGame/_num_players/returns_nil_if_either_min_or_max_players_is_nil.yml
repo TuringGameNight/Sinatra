@@ -27,11 +27,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '420'
       X-Ratelimit-Remaining:
-      - '391'
+      - '388'
       Date:
-      - Tue, 12 Jan 2021 04:06:45 GMT
+      - Tue, 12 Jan 2021 15:21:43 GMT
       X-Ratelimit-Reset:
-      - '1610424452'
+      - '1610464914'
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -50,7 +50,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: '{"games":[{"id":"q0A6GN2p3g","name":"Candyland Willy Wonka And The
         Chocolate Factory","year_published":null,"min_players":null,"max_players":null,"min_playtime":null,"max_playtime":null,"min_age":null,"description":"","description_preview":"","image_url":"https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1609456287657","thumb_url":"https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1609456287657","images":{"thumb":"https://d2k4q26owzy373.cloudfront.net/40x40/games/uploaded/1609456287657","small":"https://d2k4q26owzy373.cloudfront.net/150x150/games/uploaded/1609456287657","medium":"https://d2k4q26owzy373.cloudfront.net/350x350/games/uploaded/1609456287657","large":"https://d2k4q26owzy373.cloudfront.net/700x700/games/uploaded/1609456287657","original":"https://s3-us-west-1.amazonaws.com/5cc.images/games/uploaded/1609456287657"},"url":"https://www.boardgameatlas.com/game/q0A6GN2p3g/candyland-willy-wonka-and-the-chocolate-factory","price":"0.00","discount":"0.00","primary_publisher":{},"publishers":[],"mechanics":[],"categories":[],"designers":[],"developers":[],"artists":[],"names":[],"num_user_ratings":0,"average_user_rating":0,"official_url":null,"rules_url":null,"matches_specs":null,"spec":[],"rank":9999999,"trending_rank":0,"primary_designer":{}}]}'
-  recorded_at: Tue, 12 Jan 2021 04:06:45 GMT
+  recorded_at: Tue, 12 Jan 2021 15:21:43 GMT
 - request:
     method: get
     uri: https://api.boardgameatlas.com/api/game/categories?client_id=<DONT_EXPOSE_MY_DATA_PLEASE>
@@ -78,11 +78,11 @@ http_interactions:
       X-Ratelimit-Limit:
       - '420'
       X-Ratelimit-Remaining:
-      - '390'
+      - '387'
       Date:
-      - Tue, 12 Jan 2021 04:06:45 GMT
+      - Tue, 12 Jan 2021 15:21:44 GMT
       X-Ratelimit-Reset:
-      - '1610424452'
+      - '1610464914'
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
@@ -139,5 +139,5 @@ http_interactions:
         War II","url":"https://www.boardgameatlas.com/category/fl3TogdUzX/world-war-ii"},{"id":"OlkGBmu4Va","name":"World
         War III","url":"https://www.boardgameatlas.com/category/OlkGBmu4Va/world-war-iii"},{"id":"FmGV9rVu1c","name":"Zombies","url":"https://www.boardgameatlas.com/category/FmGV9rVu1c/zombies"},{"id":"B1N2QOByCl","name":"Zone
         Control","url":"https://www.boardgameatlas.com/category/B1N2QOByCl/zone-control"}]}'
-  recorded_at: Tue, 12 Jan 2021 04:06:45 GMT
+  recorded_at: Tue, 12 Jan 2021 15:21:44 GMT
 recorded_with: VCR 6.0.0
