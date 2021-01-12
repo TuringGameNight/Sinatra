@@ -8,4 +8,10 @@ class SearchController < ApplicationController
 
     BoardGameSerializer.new(board_games).serializable_hash.to_json
   end
+
+  get '/api/v1/categories' do
+    categories = BoardGamesFacade.category
+
+    CategorySerializer.new(categories).serializable_hash.to_json
+  end
 end
