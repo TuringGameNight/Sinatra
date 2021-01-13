@@ -4,9 +4,9 @@ class BoardGamesFacade
   def self.search(name)
     data = BoardGamesService.find_board_games(name)
 
+    available_categories = BoardGamesFacade.category
     data.map do |game|
       categories = []
-      available_categories = BoardGamesFacade.category
       game[:categories].each do |game_category|
         available_categories.each do |category|
           if game_category[:id] == category.id
