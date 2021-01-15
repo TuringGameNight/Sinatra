@@ -2,6 +2,9 @@
 
 [![Build Status](https://travis-ci.com/TuringGameNight/Sinatra.svg?branch=main)](https://travis-ci.com/TuringGameNight/Sinatra)
 
+![Game-Night-Logo](https://user-images.githubusercontent.com/56360157/104666308-cd9f9880-5690-11eb-82bf-8a23213a9a64.jpg)
+
+
 ## Table of Contents
 
   - [What It Does](#what-it-does)
@@ -9,7 +12,8 @@
   - [How to Install](#how-to-install)
   - [Testing](#testing)
   - [Endpoints](#endpoints)
-  - [Project Leads](#project-leads)
+  - [Roadmap](#roadmap)
+  - [Contributors](#contributors)
   - [Acknowledgments](#acknowledgments)
 
 ## What It Does
@@ -112,8 +116,11 @@ Querying the endpoint `GET /api/v1/search?name=clue` returns the following sampl
     ]
 }
 ```
+## Roadmap
 
-## Project Leads
+See the [open issues](https://github.com/TuringGameNight/Sinatra/issues) for a list of proposed features, known issues, and project extensions.
+
+## Contributors
 
 - Austin Aspaas - [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/austin-aspaas-4626611bb/) - [![GitHub][github-shield]](https://github.com/evilaspaas1)
 - Eduardo Parra - [![LinkedIn][linkedin-shield]](https://www.linkedin.com/in/eduardo--parra/) - [![GitHub][github-shield]](https://github.com/helloeduardo)
