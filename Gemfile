@@ -12,6 +12,7 @@ gem 'shotgun'
 gem 'sinatra'
 gem 'thin'
 gem 'tux'
+gem 'simplecov'
 
 group :test do
   gem 'capybara'
