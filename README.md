@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/TuringGameNight/Sinatra.svg?branch=main)](https://travis-ci.com/TuringGameNight/Sinatra)
 
-![Game-Night-Logo](https://user-images.githubusercontent.com/56360157/104666308-cd9f9880-5690-11eb-82bf-8a23213a9a64.jpg)
+![gamenight-logo2](https://user-images.githubusercontent.com/4582791/104680627-925f9280-56ad-11eb-9f2e-379b773a6320.png)
 
 
 ## Table of Contents
