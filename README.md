@@ -1,4 +1,4 @@
-# Game Night API
+# Game Night: Sinatra Microservice API
 
 [![Build Status](https://travis-ci.com/TuringGameNight/Sinatra.svg?branch=main)](https://travis-ci.com/TuringGameNight/Sinatra)
 
